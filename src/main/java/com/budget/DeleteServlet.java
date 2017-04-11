@@ -12,7 +12,14 @@ import java.io.IOException;
  */
 @WebServlet(name = "DeleteServlet")
 public class DeleteServlet extends HttpServlet {
+    DataBase db = new DataBase();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int number = Integer.parseInt(request.getParameter("del"));
+        db.openConnection();
+        db.deleteShopping(number);
+        db.closeConnection();
+
+        getServletContext().getRequestDispatcher("/list.jsp").forward(request,response);
 
     }
 

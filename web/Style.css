@@ -1,0 +1,122 @@
+body{
+    background: url("bcg.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Jura', sans-serif;
+}
+div.container{
+    width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+div.main-content{
+    width: 70%;
+    float: left;
+}
+div.sidebar{
+    width: 30%;
+    float: left;
+}
+div.content{
+    overflow: auto;
+}
+article, header, footer, aside, section{
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+header{
+    margin-bottom: 15px;
+}
+article{
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+footer{
+    margin-top: 15px;
+    text-align: center;
+}
+figure{
+    border-right: 2px dashed;
+    border-bottom: 2px dashed;
+}
+#info h2{
+    color: darkgoldenrod;
+}
+header h1{
+    color: forestgreen;
+}
+header nav ul{
+    list-style: none;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+    padding: 0;
+}
+header nav ul li{
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    width: 250px;
+    margin: 10px;
+}
+header nav ul li a{
+    color: beige;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+header nav ul li a span{
+     display: table-cell;
+    vertical-align: middle;
+}
+.send{
+    background: rgba(75,20,180,0.9);
+}
+.list{
+    background: rgba(90,31,174,0.9);
+}
+.home{
+    background: rgba(90,31,174,0.9);
+}
+.delete{
+    background: rgba(90,31,174,0.9);
+}
+.drop{
+    background: rgba(90,31,174,0.9);
+}
+section form{
+    background: rgba(220,240,231,0.8);
+    padding: 15px;
+}
+section form div.row{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+section form label{
+    width: 30%;
+    text-align: end;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+form input{
+    padding: 5px;
+    border-radius: 3px;
+    width: 150px;
+}
+form input[type="submit"]{
+    width: 100px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: aquamarine;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+form input[type="submit"]:hover{
+    background: rgba(255,255,255,0.8);
+}

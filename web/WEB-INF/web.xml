@@ -13,4 +13,12 @@
         <servlet-name>GetShoppingServlet</servlet-name>
         <url-pattern>/main</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.budget.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
 </web-app>

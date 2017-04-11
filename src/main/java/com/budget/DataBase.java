@@ -40,6 +40,16 @@ public class DataBase {
         }
         return true;
     }
+    public boolean deleteTable(){
+        try {
+            statement.execute("DROP TABLE expenses;");
+        }catch (SQLException e){
+            System.err.println("Błąd przy usuwaniu tabeli...");
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
     public boolean insertShopping(int number, String shop, float amount, String date){
         try {
             PreparedStatement prepStmt = conn.prepareStatement(
@@ -51,6 +61,19 @@ public class DataBase {
             prepStmt.execute();
         }catch (SQLException e){
             System.err.println("Błąd przy wprowadzaniu transakcji...");
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    public boolean deleteShopping(int number){
+        try {
+            PreparedStatement prepStmt = conn.prepareStatement(
+                    "DELETE FROM expenses WHERE id= ?;");
+            prepStmt.setInt(1, number);
+            prepStmt.executeUpdate();
+        }catch (SQLException e){
+            System.err.println("Błąd przy usuwaniu rekordu...");
             e.printStackTrace();
             return false;
         }

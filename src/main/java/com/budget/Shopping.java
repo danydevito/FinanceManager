@@ -38,6 +38,6 @@ public class Shopping {
     }
     @Override
     public String toString(){
-        return "["+id+"] "+ shop +" "+ amount +" ("+ date +")";
+        return "<td>["+id+"]</td> <td>"+ shop +"</td> <td>"+ amount +"</td> <td>("+ date +")</td>";
     }
 }

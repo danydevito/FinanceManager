@@ -35,13 +35,6 @@ public class GetShoppingServlet extends HttpServlet {
         db.openConnection();
         db.createTable();
         db.insertShopping(number, shop, amount, date);
-        db.selectShopping();
-
-        List<Shopping> zakup = db.selectShopping();
-        for (Shopping s:zakup){
-            System.out.println(s);
-        }
-
         db.closeConnection();
 
         getServletContext().getRequestDispatcher("/list.jsp").forward(request, response);
