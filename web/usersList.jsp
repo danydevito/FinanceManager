@@ -1,19 +1,16 @@
 <%@ page import="com.budget.DataBase" %>
-<%@ page import="java.io.PrintWriter" %>
-<%@ page import="com.budget.Shopping" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.budget.ShowListServlet" %>
-<%--
+<%@ page import="com.budget.Users" %><%--
   Created by IntelliJ IDEA.
   User: daniel
-  Date: 2017-03-28
-  Time: 15:33
+  Date: 2017-04-12
+  Time: 17:35
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Twój domowy budżet</title>
+    <title>Lista zarejestrowanych użytkoników</title>
     <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
 </head>
@@ -27,30 +24,25 @@
         <nav>
             <ul>
                 <li class="home"><a href="index.jsp"><span>Menu główne</span></a> </li>
-                <li class="delete"><a href="delete.jsp"><span>Usuń zakup</span></a> </li>
-                <li class="drop"><a href="drop.jsp"><span>Skasuj listę</span></a> </li>
             </ul>
         </nav>
     </header>
 
     <div class="content">
         <div class="main-content">
-            <h2>Lista Twoich wydatków</h2>
             <section>
 
                 <article id="instr">
                     <aside>
                         <table border="4" cellpadding="5" cellspacing="3" bgcolor="#f5f5dc">
                             <%
-                                DataBase db = new DataBase();
-                                db.openConnection();
-                                String userName = (String) request.getAttribute("username");
-                                System.out.println(userName);
-                                List<Shopping> zakup = db.selectShopping(userName);
-                                for (Shopping s:zakup){
-                                    out.print("<tr>"+s+"</tr><br/>");
-                                }
-                                db.closeConnection();
+                            DataBase db = new DataBase();
+                            db.openConnection();
+                            List<Users> guest=db.selectUsers();
+                            for (Users g:guest){
+                            out.print(g.getUserName()+"<br/>");
+                            }
+                            db.closeConnection();
                             %>
                         </table>
                     </aside>
@@ -81,4 +73,3 @@
 </div>
 </body>
 </html>
-

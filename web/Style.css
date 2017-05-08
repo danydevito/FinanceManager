@@ -78,6 +78,13 @@ header nav ul li a span{
 .list{
     background: rgba(90,31,174,0.9);
 }
+.register{
+    background: rgba(88,25,187,0.9);
+    float: right;
+}
+.users{
+    background: rgba(95,29,174,0.9);
+}
 .home{
     background: rgba(90,31,174,0.9);
 }

@@ -22,7 +22,8 @@
             <nav>
                 <ul>
                     <li class="send"><a href="wyslij.jsp"><span>Dodaj zakup</span></a> </li>
-                    <li class="list"><a href="list.jsp"><span>Pokaż listę wydatków</span></a> </li>
+                    <li class="list"><a href="select.jsp"><span>Pokaż listę wydatków</span></a> </li>
+                    <li class="register"><a href="register.jsp"><span>Logowanie</span></a> </li>
                 </ul>
             </nav>
         </header>

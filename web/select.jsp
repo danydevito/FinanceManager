@@ -30,25 +30,9 @@
 
     <div class="content">
         <div class="main-content">
-            <h2>Wprowadź swoje wydatki</h2>
+            <h2>Wprowadź nazwę użytkownika i hasło</h2>
             <section>
-                <form action="/main" method="post" autocomplete="off">
-                    <div class="row">
-                        <label>ID</label>
-                        <input name="n1" type="text" required autofocus="true">
-                    </div>
-                    <div class="row">
-                        <label>Shop</label>
-                        <input name="s1" type="text" required>
-                    </div>
-                    <div class="row">
-                        <label>Amount</label>
-                        <input name="a1" type="text" required>
-                    </div>
-                    <div class="row">
-                        <label>Date</label>
-                        <input name="d1" type="text" required>
-                    </div>
+                <form action="/show" method="post" autocomplete="off">
                     <div class="row">
                         <label>Username</label>
                         <input name="user1" type="text" list="users" required>
@@ -69,7 +53,7 @@
                         <label>Password</label>
                         <input name="pass1" type="password" required>
                     </div>
-                    <input type="submit" value="Wyślij">
+                    <input type="submit" value="Pokaż listę">
                 </form>
                 <footer>Wszelskie prawa zastrzeżone &copy;</footer>
             </section>
